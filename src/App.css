@@ -28,7 +28,8 @@ html, body {
 }
 
 body {
-  background-image: url("/src/tft-wallpaper.jpg");
+  background-color:#3b3636;
+  /*background-image: url("/src/tft-wallpaper.jpg");*/
   background-size:cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -42,9 +43,28 @@ form {
 
 label {
   display:table-cell;
+  text-align: center;
+  font-weight: bold;
 }
 
 input {
   display:table-cell;
 }
 
+p {
+  color:white;
+
+}
+
+.footer {
+  font-size:smaller;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  color: white;
+  text-align: center;
+  padding:0 150px;
+  box-sizing: border-box;
+}
