@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <form>
+      <form onsubmit="return false">
         <p>
           <label for="level">Level</label>
           <input type="number" id="level"></input>
@@ -31,13 +31,13 @@ function App() {
           <label for="taken">Units taken</label>
           <input type="number" id="taken"></input>
         </p>
-        <button onClick={activateGamba}>gamba</button>
-        <p>avg unit on rolldown: {gamba}</p>
+        <button type="button"onClick={activateGamba}>gamba</button>
       </form>
+      <p>Average unit on rolldown: {gamba}</p>
       <div className="footer">
-        <p>tft-roller isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. 
+        <p className="disclaimer">tft-roller isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. 
           League of Legends™ and Riot Games are trademarks or registered trademarks of Riot Games, Inc.</p>
-            Contact: togabriel@protonmail.com
+        <p className="contact">Contact: togabriel@protonmail.com</p>
       </div>
     </div>
     

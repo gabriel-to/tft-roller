@@ -67,4 +67,18 @@ p {
   text-align: center;
   padding:0 150px;
   box-sizing: border-box;
+  margin-bottom: 0;
+  padding-top:0;
+  margin:0;
+}
+
+.disclaimer {
+  margin-bottom: 0px;
+  margin-top:10px;
+}
+
+.contact {
+  margin:0;
+  padding-top:2px;
+  padding-bottom: 10px;
 }
