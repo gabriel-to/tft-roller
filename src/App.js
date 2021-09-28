@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
 import './App.css';
 import './Roll.js';
-import rollChance from './Roll.js';
+import rolljs from './Roll.js';
 import Navbar from './Navbar';
 
 function App() {
   const [gamba, setGamba] = useState(0)
+  const [percent, setPercent] = useState(0)
 
+  function activatePercent() {
+    setPercent(rolljs.getPercent());
+  }
   function activateGamba() { 
-    setGamba(rollChance());
+    setGamba(rolljs.rollChance());
   }
   
   return (
@@ -31,9 +35,10 @@ function App() {
           <label for="taken">Units taken</label>
           <input type="number" id="taken"></input>
         </p>
-        <button type="button"onClick={activateGamba}>gamba</button>
+        <button id="gamba" type="button"onClick={() => {activateGamba(); activatePercent();}}>gamba</button>
       </form>
       <p>Average unit on rolldown: {gamba}</p>
+      <p>Percent to hit at least one unit: {percent}%</p>
       <div className="footer">
         <p className="disclaimer">tft-roller isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. 
           League of Legends™ and Riot Games are trademarks or registered trademarks of Riot Games, Inc.</p>

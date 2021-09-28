@@ -82,3 +82,14 @@ p {
   padding-top:2px;
   padding-bottom: 10px;
 }
+
+#gamba {
+  padding : 6px 14px;
+  border-radius: 6px;
+  background-color: #340e6b;
+  color: white;
+  cursor:pointer;
+  outline: none;
+  border-style: none;
+  outline-style: none;
+}
